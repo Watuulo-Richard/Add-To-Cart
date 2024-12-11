@@ -1,0 +1,15 @@
+.btn {
+    border: none;
+    background-color: $info-color;
+    padding: 1rem 3rem;
+    color: $secondary-color;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        box-shadow: $info-color 0px 5px 15px;
+        color: $primary-color;
+        scale: 1.09;
+    }
+}

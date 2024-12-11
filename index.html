@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">
+                <h2>Richm@nd</h2>
+            </a>
+            <button type="button" class="hamburg-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <button type="submit" id="addCartBtn" class="btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </nav>
+        <section class="cart-and-products-container">
+            <div class="products">
+                <div class="products-heading">
+                    <h2>Featured<i class="fa-solid fa-face-laugh-wink emoji-between"></i>Products</h2>
+                </div>
+                <div class="cart-container"></div>
+            </div>
+            <div class="cart">
+                
+                <div class="cart-header">
+                    <h2>Cart-Items</h2>
+                    <button type="button" id="close-button">
+                        <i class="fa-solid fa-xmark de-icon"></i>
+                    </button>
+                </div>
+                <div class="cart-products"></div>
+                <div class="total">
+                    <h3>Total:</h3>
+                    <h3 class="total"></h3>
+                </div>
+            </div>  
+        </section>
+        <div class="loader">
+            <span class="loader"></span>
+        </div> 
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
