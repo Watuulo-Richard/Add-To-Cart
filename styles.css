@@ -17,6 +17,7 @@ body {
   max-width: 1400px;
 }
 body .container {
+  position: relative;
   padding: 1rem;
 }
 body .container a {
@@ -95,6 +96,22 @@ body .container .loader .loader:after {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+body .container .pop-up {
+  background-color: #f59e0b;
+  color: white;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  transform: translateX(-3000px);
+  transition: all ease-in-out;
+  top: 0;
+  z-index: 2;
+}
+body .container .show {
+  transform: translateX(0px);
+  animation: pop-up 0.4s after;
+  transition: all 0.4s ease-in-out;
+}
 .btn {
   border: none;
   background-color: #f59e0b;
@@ -117,6 +134,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #c026d3;
+  position: fixed;
+  width: 90%;
+  z-index: 1;
   padding: 2rem 4rem;
   border-radius: 1rem;
 }
@@ -133,6 +153,7 @@ nav .hamburg-menu i {
 }
 nav .nav-links {
   display: flex;
+  align-items: center;
   gap: 2rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -142,6 +163,9 @@ nav .nav-links a {
 }
 nav .nav-links a:hover {
   color: #f59e0b;
+}
+nav .nav-links .nav-link-button {
+  display: none;
 }
 nav #addCartBtn {
   font-size: 2rem;
@@ -156,17 +180,22 @@ nav #addCartBtn {
     display: block;
   }
   nav .nav-links {
+    display: none;
+    transition: all 0.4s ease-in-out;
     flex-direction: column;
     gap: 1rem;
-    position: fixed;
-    top: 11.3%;
-    right: 3%;
+    position: absolute;
+    top: 105%;
+    right: 0%;
     border-radius: 1rem;
     padding: 1rem;
-    background: red;
+    background: #831843;
   }
-  nav button {
-    display: none;
+  nav .nav-links .nav-link-button {
+    display: block;
+  }
+  nav .nav-links:hover {
+    color: #f59e0b;
   }
 }
 
@@ -314,6 +343,15 @@ nav #addCartBtn {
 @media (max-width: 1024px) {
   .cart-and-products-container {
     flex-direction: column;
+  }
+}
+@media (max-width: 630px) {
+  .cart-and-products-container .cart {
+    width: 60%;
+    margin-right: 1rem;
+  }
+  .cart-and-products-container .cart .cart-product .cart-text-product .btn {
+    padding: 0.5rem 1rem;
   }
 }
 

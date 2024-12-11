@@ -16,6 +16,7 @@ body {
     max-width: 1400px;
     
     .container {
+      position: relative;
       padding: 1rem;
       a {
         text-decoration: none;
@@ -98,9 +99,26 @@ body {
                 }
             }
       }
+      .pop-up {
+        background-color: $info-color;
+        color: white;
+        width: 100%;
+        padding: 1rem 2rem;
+        position: fixed;
+        transform: translateX(-3000px);
+        transition: all ease-in-out;
+        top: 0;
+        z-index: 2;
+      }
+      .show {
+        transform: translateX(0px);
+        animation: pop-up .4s after;
+        transition: all .4s ease-in-out;
+      }
       @media (max-width: 1024px){
         // width: 80%;
       }
     }
+
 
 }

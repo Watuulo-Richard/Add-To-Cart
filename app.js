@@ -7,6 +7,8 @@ const total = document.querySelector(".total")
 const closeBtn = document.getElementById("close-button")
 const hamburgMenuButton = document.querySelector(".hamburg-menu")
 const navLinksContainer = document.querySelector(".nav-links")
+const popUpElement = document.querySelector(".pop-up")
+
 hamburgMenuButton.addEventListener('click', function(){
     navLinksContainer.classList.toggle("nav-links")
 })
@@ -46,7 +48,6 @@ let cartArray = JSON.parse(localStorage.getItem('newItems')) || [];
 displayAddToCartItemsOnUI(cartArray)
 
 function displayProductsOnUI(newArray) {
-    // productContainer.innerHTML = ''
     newArray.forEach((product) => {
         const div = document.createElement('div')
         div.classList.add('cart-item')
@@ -108,7 +109,10 @@ function addMyProduct(title , image , price, id){
     // console.log(id)
     console.log(cartArray)
     calculateTotal()
-
+    popUpElement.classList.toggle('show')
+    setTimeout(()=>{
+        popUpElement.classList.remove('show')
+    }, 3000)
    
 }
 console.log(total)
