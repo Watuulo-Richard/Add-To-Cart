@@ -15,6 +15,7 @@ nav {
     }
 
     .hamburg-menu {
+        display: none;
         border: none;
         background-color: transparent;
         color: $secondary-color;
@@ -49,6 +50,34 @@ nav {
         }
     }
     @media (max-width: 630px){
+        .hamburg-menu {
+            display: block;
+        }
+        .nav-links {
+            display: none;
+            transition: all .4s ease-in-out;
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 105%;
+            right: 0%;
+            border-radius: 1rem;
+            padding: 1rem;
+            background: $card-bg;
+            .nav-link-button {
+                display: block;
+            }
+            &:hover {
+                color: $info-color;
+            }
+        }
+        & button {
+            // display: none;
+        }
+    }
+    @media (max-width: 344px){
+        gap: 2rem;
+        padding: 2rem;
         .hamburg-menu {
             display: block;
         }

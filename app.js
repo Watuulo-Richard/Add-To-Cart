@@ -89,7 +89,7 @@ function displayAddToCartItemsOnUI(data){
             </div>
         `
         myContainer.appendChild(div)
-        // calculateTotal()
+        calculateTotal()
     })
 
 }
